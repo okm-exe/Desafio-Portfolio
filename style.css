@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    --red: #e3646e;
+    --purple: #bb72e9;
+    --blue: #3996db;
+    --green: #82bc4f;
+    --yellow: #eabd5f;
+    --gray-1: #0d0e11;
+    --gray-2: #16181d;
+    --gray-3: #292c34;
+    --gray-4: #878ea1;
+    --gray-5: #c0c4ce;
+    --gray-6: #e2e4e9;
+    font-family: Maven Pro;
+    color: var(--gray-5);
+}
+#app {
+    background-color: var(--gray-2);
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+}
+#foto{
+    position: relative;
+    display: inline-block;
+}
+#foto img {
+    padding: 5px;
+    display: block;
+    border-radius: 50%;
+    height: 87px;
+    border: 3px solid var(--red);
+}
+#foto svg {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+}
+#intro {
+    background-image: url(assets/Background_Intro.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#introBLOCK {
+    padding-top: 90px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+#introBLOCK > p {
+    color: var(--gray-4);
+}
+#HW {
+    margin-top: 56px;
+    font-family: Inconsolata;
+    color: var(--gray-5);
+    font-family: 20px;
+}
+#introBLOCK > h1 {
+    font-family: Asap;
+    color: var(--gray-6);
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#introBLOCK p span, #projetos :first-child, #negocio :first-child, #socials :first-child{
+    color: var(--red);
+    font-family: Inconsolata;
+}
+#lang {
+    margin-top: 80px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+#lang span {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--gray-3);
+    border-radius: 25px;
+    padding: 8px 16px;
+}
+#lang span img {
+    height: 19px;
+}
+#projetos {
+    background-color: var(--gray-2);
+    align-items: center;
+    text-align: center;
+    padding-bottom: 144px;
+    margin: auto;
+}
+#introPROJ {
+    padding-top: 72px;
+    margin-bottom: 56px;
+}
+#cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+    justify-content: center;
+}
+.card {
+    background-color: var(--gray-3);
+    border-radius: 14px;
+    padding: 10px 0px 10px;
+    width: 330px;
+    height: 240px;
+}
+.card img {
+    height: 156px;
+    border-radius: 10px;
+}
+.card p {
+    text-align: left;
+    margin: 10px 15px;
+}
+.card .cardTitle, .nTtle{
+    color: var(--gray-6);
+    font-weight: 600;
+}
+.card :nth-child(3) {
+    font-size: 14px;
+    color: var(--gray-5);
+}
+h3 {
+    font-size: 28px;
+    color: var(--gray-6);
+}
+#negocio {
+    background-color: var(--gray-1);
+    text-align: center;
+    padding-top: 88px;
+    padding-bottom: 120px;
+}
+#negocioTitle {
+    margin-bottom: 56px;
+}
+#negocioWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 24px;
+    justify-content: center;
+}
+.nCard {
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid var(--gray-3);
+}
+.nCard img {
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+.nTtle {
+    margin-bottom: 10px;
+}
+#socials {
+    text-align: center;
+    padding-top: 128px;
+}
+#sTt {
+    margin-bottom: 48px;
+}
+#linksWrapper {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 200px;
+    gap: 15px;
+}
+.links{
+    display: flex;
+    background-color: #292c34;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+.links svg {
+    position: absolute;
+    right: 20px;
+
+}
+
+/* media query */
+@media (max-width: 1100px) {
+    #cardContainer {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    #introBLOCK {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #negocioWrapper {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: 24px;
+        justify-content: center;
+    }
+    
+}
+@media (max-width: 700px) {
+    #cardContainer {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, auto);
+    }
+    #lang {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+    .links {
+        width: 320px;
+    }
+}
